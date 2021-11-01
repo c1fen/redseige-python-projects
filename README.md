@@ -1,3 +1,3 @@
 # redseige-python-projects
 
-Python exercises for pentesting
+Python exercises for developing pentesting tools
