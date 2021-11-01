@@ -23,7 +23,6 @@ if args['file']:
 
 for line in lines:
 
-  #do the thing
 	try:
 		response = requests.get(line)
 
@@ -32,16 +31,12 @@ for line in lines:
 		sts = ' '
 		csp = ' '
 		xfo = ' '
-		svr = ''
+		serv = ''
 
-		prefix = line.split("://")[0]
+		protocol = line.split("://")[0]
 		hostname = line.split("://")[1].split("/")[0]
 
-		if prefix == 'http':
-			protocol = 'http'
-		elif prefix == 'https':
-			protocol = 'https'
-		else:
+		if protocol not in ("http","https"):
 			protocol = 'unknown protocol'
 
 		r = requests.get(line)
@@ -59,19 +54,19 @@ for line in lines:
 			csp = '+'
 
 		#check X-Frame-Options
-		if 'Content-Security-Policy' in r.headers:
+		if 'X-Frame-Options' in r.headers:
 			xfo = '+'
 
 		#check if any server headers
 		if 'Server' in r.headers:
-			svr = r.headers['server']
+			serv = r.headers['server']
 		
 		print("========================================")
 		print(f"{'URL: ':<5}{line:<40}")
 		print("========================================")
 		print(
 			f"{'IP: ':<5}{str(ip_addr):>35}",
-			f"\n{'Server: ':<5}{svr:>32}",
+			f"\n{'Server: ':<5}{serv:>32}",
 			f"\n{'Protocol: ':<30}{protocol:>10}",
 			f"\n{'Strict-Transport-Security: ':<30}{'[' + sts + ']':>10}",
 			f"\n{'Content-Security-Policy: ':<30}{'[' + csp + ']':>10}",
