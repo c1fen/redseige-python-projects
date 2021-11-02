@@ -18,7 +18,7 @@ Version 2 (project3_v2.py)
 - allows option of 1. bruteforcing every combination of username / password, or 2. password spraying against a list of usernames
 
 <h2>Project 3 - Brute Force!</h2>
->
+
 >Scenario: You are working on an internal penetration test for Red Planet and have found a system that your point of contact labeled as "mission critical" has SSH enabled. Due to other findings on the network you know that the security administrator has weak passwords on lots of critical systems. Knowing this, you believe that you can password spray/brute force your way to victory.
 >
 >Beginner Task: Write a script that will perform a password spray against the SSH service using a single username and password list. It should output each time a username/password combination is failed, and stop on a successful log in.
