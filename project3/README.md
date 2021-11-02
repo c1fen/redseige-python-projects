@@ -14,7 +14,7 @@ This version accepts two files for usernames and passwords respectively, and con
 
 Version 2 (project3_v2.py)
 
-- accepts both files and single input username or password
+- now accepts both a. files, and b. single input username or password
 - allows option of 1. bruteforcing every combination of username / password, or 2. password spraying against a list of usernames
 
 <h2>Project 3 - Brute Force!</h2>
