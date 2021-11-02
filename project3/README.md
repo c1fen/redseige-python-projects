@@ -1,4 +1,23 @@
->Project 3 - Brute Force!
+<h2>TO DO:</h2>
+
+- move the bruteforce method to be arguments rather than an extra input step
+- the method is redundant, either method still takes all usernames and passwords and bruteforces. Need to put in an exception requiring only one password if password spray etc. 
+
+<h2>CHANGELOG</h2>
+
+Version 1 (3_v1.py)
+
+This version accepts two files for usernames and passwords respectively, and conducts the bruteforce againt the target host.
+
+- accepts as arguments: user list, passwords list, hostname, port
+- conducts bruteforce, trying each combination of username and password and printing out fail / success
+
+Version 2 (project3_v2.py)
+
+- accepts both files and single input username or password
+- allows option of 1. bruteforcing every combination of username / password, or 2. password spraying against a list of usernames
+
+<h2>Project 3 - Brute Force!</h2>
 >
 >Scenario: You are working on an internal penetration test for Red Planet and have found a system that your point of contact labeled as "mission critical" has SSH enabled. Due to other findings on the network you know that the security administrator has weak passwords on lots of critical systems. Knowing this, you believe that you can password spray/brute force your way to victory.
 >
